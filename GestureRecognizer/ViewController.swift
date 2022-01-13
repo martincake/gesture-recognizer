@@ -11,7 +11,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -75,16 +74,11 @@ class ViewController: UIViewController {
     
     @objc func handleSwipes(gesture: UISwipeGestureRecognizer) {
         switch gesture.direction {
-        case .right:
-            label.text = "Right swipe was recognized"
-        case .left:
-            label.text = "Left swipe was recognized"
-        case .down:
-            label.text = "Down swipe was recognized"
-        case .up:
-            label.text = "Up swipe was recognized"
-        default:
-            break
+        case .right: label.text = "Right swipe was recognized"
+        case .left: label.text = "Left swipe was recognized"
+        case .down: label.text = "Down swipe was recognized"
+        case .up: label.text = "Up swipe was recognized"
+        default: break
         }
     }
     
